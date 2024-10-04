@@ -58,6 +58,7 @@ function App() {
 
   return (
     <>
+      <body>
         <Header/>
         <Section/>
         <PostContext.Provider value={PostValue}>
@@ -66,6 +67,7 @@ function App() {
             <Route path="/post/:id" element={<PostView/>} />
           </Routes>
         </PostContext.Provider>
+      </body>
     </>
   )
 }

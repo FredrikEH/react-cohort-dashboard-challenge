@@ -13,13 +13,6 @@ function PostItem({post}){
             setContact(matchingContact)
         }
     }, [contacts, post.contactId])
-
-    useEffect(() => {
-        if(posts && post.id){
-            const matchingPost = posts.find((post) => post.id === parseInt(post.id, 10))
-            setPost(matchingPost)
-        }
-    }, [post, post.id])
     
     if(!post || contact === null){
         return <div>Loading...</div>
