@@ -8,7 +8,7 @@ function PostList(){
     const {posts} = useContext(PostContext)
     
     return(
-        <main>
+        <main class="main green">
             <PostCreate/>
             <ul>
                 {[...posts].reverse().map((post, index) => (

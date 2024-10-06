@@ -58,16 +58,18 @@ function App() {
 
   return (
     <>
-      <body>
+      <div className='container'>
         <Header/>
-        <Section/>
-        <PostContext.Provider value={PostValue}>
-          <Routes>
-            <Route path="/" element={<PostList/>} />
-            <Route path="/post/:id" element={<PostView/>} />
-          </Routes>
-        </PostContext.Provider>
-      </body>
+        <div className='container-nav-main'>
+          <Section/>
+          <PostContext.Provider value={PostValue}>
+            <Routes>
+              <Route path="/" element={<PostList/>} />
+              <Route path="/post/:id" element={<PostView/>} />
+            </Routes>
+          </PostContext.Provider>
+        </div>
+      </div>
     </>
   )
 }

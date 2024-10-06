@@ -19,11 +19,10 @@ function PostView(){
     }
 
     return(
-        <div>
+        <div className="yellow">
             <h2>{post.title}</h2>
             <p>{post.content}</p>
             <CommentList id={id}/>
-            <input type="text" placeholder="Add a comment..."></input>
         </div>
     )
 }

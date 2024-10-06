@@ -1,13 +1,19 @@
-import { useContext, useState } from "react"
+import { useState, useEffect } from "react"
 import CommentItem from "./CommentItem"
-import { PostContext } from "../App"
 
 function CommentList({id}){
-    const {comments, getComments} = useContext(PostContext)
+    const [comments, setComments] = useState([]);
 
-    useState(() => {
-        getComments(id)
-    }, [id, getComments])
+    useEffect(() => {
+        async function getComments() {
+            const response = await fetch(
+                `https://boolean-uk-api-server.fly.dev/FredrikEH/post/${id}/comment`
+            );
+            const data = await response.json();
+            setComments(data);
+        }
+        getComments();
+    }, [id]);
 
     return(
         <div> 
