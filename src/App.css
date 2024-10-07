@@ -33,7 +33,6 @@ make the child components lay out using flex, vertically stacked in a column */
 .header {
   height: 200px;
   width: 100vw;
-  color: white;
 }
 
 /* make the sidebar fill the available height and be of fixed width */
@@ -92,11 +91,6 @@ button:hover{
 
 input{
   background-color: #e6ebf5;
-}
-
-h1{
-  color: white;
-  margin: 10px;
 }
 
 h2{
