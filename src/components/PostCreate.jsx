@@ -31,7 +31,7 @@ function PostCreate(){
     }
 
     return(
-        <div>
+        <div class="main green">
             <form onSubmit={handleSubmit}>
                 <ul>
                     <li>

@@ -66,7 +66,9 @@ function PostItem({post}){
   
     return(
         <li className="yellow">
-            <h2>{contact.firstName.charAt(0)} {contact.lastName.charAt(0)} {contact.firstName} {contact.lastName}</h2>
+            <Link to={`/profile/${contact.id}`}>
+                <h2>{contact.firstName.charAt(0)} {contact.lastName.charAt(0)} {contact.firstName} {contact.lastName}</h2>
+            </Link>
             <Link to={`/post/${post.id}`}><h3>{post.title}</h3></Link>
             <p>{post.content}</p>
             <CommentList id={post.id}/>

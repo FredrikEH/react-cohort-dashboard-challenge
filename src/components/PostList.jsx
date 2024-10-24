@@ -3,12 +3,11 @@ import PostItem from './PostItem'
 import PostCreate from "./PostCreate"
 import { PostContext } from '../App'
 
-
 function PostList(){
     const {posts} = useContext(PostContext)
     
     return(
-        <main class="main green">
+        <main class="green">
             <PostCreate/>
             <ul>
                 {[...posts].reverse().map((post, index) => (

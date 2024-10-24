@@ -96,3 +96,8 @@ input{
 h2{
   color: #64648c;
 }
+
+form{
+  background-color: white;
+  padding: 20px;
+}

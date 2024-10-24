@@ -3,7 +3,8 @@ import Header from './components/Header'
 import Section from './components/Section'
 import PostList from './components/PostList'
 import PostView from './components/PostView'
-import {Route, Routes} from 'react-router-dom'
+import Profile from './components/Profile'
+import {Route, RouterProvider, Routes} from 'react-router-dom'
 
 export const PostContext = createContext()
 
@@ -65,6 +66,7 @@ function App() {
           <PostContext.Provider value={PostValue}>
             <Routes>
               <Route path="/" element={<PostList/>} />
+              <Route path="/profile/:id" element ={<Profile/>} />
               <Route path="/post/:id" element={<PostView/>} />
             </Routes>
           </PostContext.Provider>
